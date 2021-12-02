@@ -1,5 +1,6 @@
 body {
     background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .heading-box {
     padding-left: 25%;
@@ -22,10 +23,20 @@ h1 {
     padding-top: 5%;
     padding-left: 25%;
     border: 0;
-    /* text-align: center; */
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
 }
-button {
+.token-placement {
     height: 150px;
     width: 150px;
     background-color: white;
+    font-size: 100px;
+}
+#toggle-one {
+    color: indigo;
+    border: 2px indigo;
+}
+#toggle-two {
+    color: pink;
 }
