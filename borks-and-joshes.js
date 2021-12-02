@@ -1,5 +1,3 @@
-console.log('Welcome to Borks and Joshes')
-
 var button = document.querySelectorAll('.token-placement');
 var playAgain = document.querySelector('.play-again');
 var btn1 = document.querySelector('#btn1');
@@ -33,9 +31,14 @@ function selectedSquare(event) {
     let togOne = document.querySelector('#toggle-one');
     let togTwo = document.querySelector('#toggle-two');
     // let playerNoToggle = document.querySelector('#player-no-toggle');
-
     theOneClickedOn.disabled = true;
     theOneClickedOn.style.backgroundColor = "grey";
+    if (playerOneTurn === true) {
+        theOneClickedOn.style.background = 'url("jimmy.jpeg")';
+    } else {
+        theOneClickedOn.style.background = 'url("josh.jpeg")';
+    }
+    //set style.background to an image
 
     if (playerOneTurn === true) {
         theOneClickedOn.textContent = "X";
@@ -46,39 +49,48 @@ function selectedSquare(event) {
             console.log('line 1 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togOne.textContent = "ONE";
 
         } else if ((btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn4.textContent === "X") && (btn5.textContent === "X") && (btn6.textContent === "X")) {
             console.log('line 2 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togOne.textContent = "ONE";
         } else if ((btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true) && (btn7.textContent === "X") && (btn8.textContent === "X") && (btn9.textContent === "X")) {
             console.log('line 3 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togOne.textContent = "ONE";
         } else if ((btn1.disabled === true) && (btn4.disabled === true) && (btn7.disabled === true) && (btn1.textContent === "X") && (btn4.textContent === "X") && (btn7.textContent === "X")) {
             console.log('line 4 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togOne.textContent = "ONE";
         } else if ((btn2.disabled === true) && (btn5.disabled === true) && (btn8.disabled === true) && (btn2.textContent === "X") && (btn5.textContent === "X") && (btn8.textContent === "X")) {
             console.log('line 5 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togOne.textContent = "ONE";
         } else if ((btn3.disabled === true) && (btn6.disabled === true) && (btn9.disabled === true) && (btn3.textContent === "X") && (btn6.textContent === "X") && (btn9.textContent === "X")) {
             console.log('line 6 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togOne.textContent = "ONE";
         } else if ((btn1.disabled === true) && (btn5.disabled === true) && (btn9.disabled === true) && (btn1.textContent === "X") && (btn5.textContent === "X") && (btn9.textContent === "X")) {
             console.log('line 7 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togOne.textContent = "ONE";
         } else if ((btn3.disabled === true) && (btn5.disabled === true) && (btn7.disabled === true) && (btn3.textContent === "X") && (btn5.textContent === "X") && (btn7.textContent === "X")) {
             console.log('line 8 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togOne.textContent = "ONE";
         } else if ((btn1.disabled === true) && (btn2.disabled === true) && (btn3.disabled === true) && (btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true)) {
                 console.log('Its a draw');
                 playerNoToggle.textContent = "NO";
                 turnWinsToggle.textContent = "WINS";
+                togOne.textContent = "ONE";
         } else {
             console.log('yippy ki yay');
         }
@@ -91,46 +103,55 @@ function selectedSquare(event) {
             console.log('line 1 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togTwo.textContent = "TWO";
+            togTwo.textContent = "TWO";
         } else if ((btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn4.textContent === "O") && (btn5.textContent === "O") && (btn6.textContent === "O")) {
             console.log('line 2 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togTwo.textContent = "TWO";
         } else if ((btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true) && (btn7.textContent === "O") && (btn8.textContent === "O") && (btn9.textContent === "O")) {
             console.log('line 3 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togTwo.textContent = "TWO";
         } else if ((btn1.disabled === true) && (btn4.disabled === true) && (btn7.disabled === true) && (btn1.textContent === "O") && (btn4.textContent === "O") && (btn7.textContent === "O")) {
             console.log('line 4 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togTwo.textContent = "TWO";
         } else if ((btn2.disabled === true) && (btn5.disabled === true) && (btn8.disabled === true) && (btn2.textContent === "O") && (btn5.textContent === "O") && (btn8.textContent === "O")) {
             console.log('line 5 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togTwo.textContent = "TWO";
         } else if ((btn3.disabled === true) && (btn6.disabled === true) && (btn9.disabled === true) && (btn3.textContent === "O") && (btn6.textContent === "O") && (btn9.textContent === "O")) {
             console.log('line 6 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togTwo.textContent = "TWO";
         } else if ((btn1.disabled === true) && (btn5.disabled === true) && (btn9.disabled === true) && (btn1.textContent === "O") && (btn5.textContent === "O") && (btn9.textContent === "O")) {
             console.log('line 7 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togTwo.textContent = "TWO";
         } else if ((btn3.disabled === true) && (btn5.disabled === true) && (btn7.disabled === true) && (btn3.textContent === "O") && (btn5.textContent === "O") && (btn7.textContent === "O")) {
             console.log('line 8 game over');
             gameOver();
             turnWinsToggle.textContent = "WINS";
+            togTwo.textContent = "TWO";
         } else if ((btn1.disabled === true) && (btn2.disabled === true) && (btn3.disabled === true) && (btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true)) {
             console.log('Its a draw');
             playerNoToggle.textContent = "NO";
             turnWinsToggle.textContent = "WINS";
+            togTwo.textContent = "TWO";
         } else {
             console.log('yippy ki yay');
         }
     } togglePlayerTurn();
 }
 function startGameAgain() {
-    // playerOneTurn = true;
-
+    
     btn1.disabled = false;
     btn2.disabled = false;
     btn3.disabled = false;
@@ -141,15 +162,15 @@ function startGameAgain() {
     btn8.disabled = false;
     btn9.disabled = false;
 
-    btn1.style.backgroundColor = "white";
-    btn2.style.backgroundColor = "white";
-    btn3.style.backgroundColor = "white";
-    btn4.style.backgroundColor = "white";
-    btn5.style.backgroundColor = "white";
-    btn6.style.backgroundColor = "white";
-    btn7.style.backgroundColor = "white";
-    btn8.style.backgroundColor = "white";
-    btn9.style.backgroundColor = "white";
+    btn1.style.background = "white";
+    btn2.style.background = "white";
+    btn3.style.background = "white";
+    btn4.style.background = "white";
+    btn5.style.background = "white";
+    btn6.style.background = "white";
+    btn7.style.background = "white";
+    btn8.style.background = "white";
+    btn9.style.background = "white";
 
     btn1.textContent = "";
     btn2.textContent = "";
@@ -162,6 +183,7 @@ function startGameAgain() {
     btn9.textContent = "";
     turnWinsToggle.textContent = "TURN";
     playerNoToggle.textContent = "PLAYER";
+
 }
 
 function gameOver() {
