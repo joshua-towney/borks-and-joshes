@@ -1,12 +1,17 @@
 body {
-    background-color: grey;
+    background-color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 .heading-box {
-    padding-left: 25%;
+    width: 450px;
+}
+.jimmy-token {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.josh-token {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 h1 {
     text-align: left;
@@ -15,17 +20,21 @@ h1 {
     text-decoration: underline;
 }
 .mainbox {
-    /* position: absolute; */
-    width: 50%;
-    padding-top: 5%;
-    padding-left: 25%
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 550px;
+    padding: 0 10% 3% 10%;
+    margin-left: 25%;
+    margin-right: 10%;
+    background-color: grey;
 }
 .game-field {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 50%;
     padding-top: 5%;
-    padding-left: 25%;
+    padding: 0;
     border: 0;
     text-align: center;
     font-size: 35px;
@@ -34,18 +43,27 @@ h1 {
 .token-placement {
     height: 150px;
     width: 150px;
-    background-color: white;
+    background-color: grey;
     font-size: 0;
 }
 .player-one {
     color: indigo;
+    font-size: 1.7em;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 .player-two {
     color: pink;
+    font-size: 1.7em;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 .draw {
     color: red;
     text-decoration: underline;
+    font-size: 1.7em;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 .start-game {
     color: black;
@@ -54,16 +72,47 @@ h1 {
     color: green;
     text-decoration: underline;
 }
+#turn-wins-toggle {
+    font-size: 1.7em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#player-no-toggle {
+    font-size: 1.7em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
 .play-again {
-    margin: 50px 0 50px 50%;
-    height: 100px;
+    height: 150px;
     width: 150px;
     font-size: 2em;
-   /* width: 100%; */
+    border-radius: 50%;
+    background-color: grey;
 }
 #borks {
-    font-size: 80px;
+    font-size: 125px;
+    text-align: justify;
 }
 #and-joshes {
     margin-top: 0;
+    text-align: justify;
+    font-size: 87px;
+}
+.right {
+    padding: 0 20px;
+    margin-top: 700px;
+    width: 150px;
+}
+.transparent {
+    filter: blur(10px);
+}
+.opaque {
+    filter: blur(none);
+}
+.adaptable-words {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.7em;
+    text-align: center;
+    font-weight: 900;
 }

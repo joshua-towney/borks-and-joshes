@@ -9,28 +9,48 @@
 </head>
 <body>
     <section class="mainbox">
-        <div class="heading-box">
-            <h1 id="borks">BORKS</h1>
-            <img id="jimmy" src="jimmy.jpeg"> 
-            <h1 id="and-joshes">AND JOSHES</h1>
-            <img id="josh" src="josh.jpeg">
+        <div class="left">
+            <div class="heading-box">
+                <h1 id="borks">BORKS</h1>
+                <div class="jimmy-token">
+                    <img id="jimmy" class="opaque" src="jimmy.jpeg">
+                    <img id="jimmy2" class="transparent" src="jimmy2.jpeg">
+                    <img id="jimmy4" class="transparent" src="jimmy4.jpeg">
+                </div>
+                <h1 id="and-joshes">& JOSHES</h1>
+                <div class="josh-token">
+                    <img id="josh3" class="transparent" src="josh3.jpeg">
+                    <img id="josh4" class="transparent" src="josh4.jpeg">
+                    <img id="josh" class="opaque" src="josh.jpeg">
+                </div>
+            </div>
+            <div class="adaptable-words">
+                <p id="player-no-toggle" class="start-game">PLAYER</p>
+                <p id="toggle-one-two" class="player-one">ONE</p>
+                <p id="turn-wins-toggle"class="start-game">TURN</p>
+            </div>
+
+            <div class="game-field">
+                <!-- <p id="player-no-toggle" class="start-game">PLAYER</p>
+                <p id="toggle-one-two" class="player-one">ONE</p>
+                <p id="turn-wins-toggle"class="start-game">TURN</p> -->
+                <button id="btn1" class="token-placement"></button>
+                <button id="btn2" class="token-placement"></button>
+                <button id="btn3" class="token-placement"></button>
+                <button id="btn4" class="token-placement"></button>
+                <button id="btn5" class="token-placement"></button>
+                <button id="btn6" class="token-placement"></button>
+                <button id="btn7" class="token-placement"></button>
+                <button id="btn8" class="token-placement"></button>
+                <button id="btn9" class="token-placement"></button>
+            </div>
         </div>
-        <div class="game-field">
-            <p id="player-no-toggle" class="start-game">PLAYER</p>
-            <p id="toggle-one-two" class="player-one">ONE</p>
-            <p id="turn-wins-toggle"class="start-game">TURN</p>
-            <button id="btn1" class="token-placement"></button>
-            <button id="btn2" class="token-placement"></button>
-            <button id="btn3" class="token-placement"></button>
-            <button id="btn4" class="token-placement"></button>
-            <button id="btn5" class="token-placement"></button>
-            <button id="btn6" class="token-placement"></button>
-            <button id="btn7" class="token-placement"></button>
-            <button id="btn8" class="token-placement"></button>
-            <button id="btn9" class="token-placement"></button>
-        </div>
-        <div>
-            <button class="play-again">PLAY AGAIN?</button>
+        <div class="right">
+            <p>PLAYER 1 SCORE: <span id="p1-score"></span></p>
+            <p>PLAYER 2 SCORE: <span id="p2-score"></span></p>
+            <p>DRAWS: <span id="draw-score"></span></p>
+            <button disabled=true class="play-again">PLAY AGAIN?</button>
+            <!-- <button class="score-reset">RESET SCORES?</button> -->
         </div>
     </section>
 
