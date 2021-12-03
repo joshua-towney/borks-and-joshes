@@ -37,12 +37,22 @@ h1 {
     background-color: white;
     font-size: 0;
 }
-#toggle-one {
+.player-one {
     color: indigo;
-    border: 2px indigo;
 }
-#toggle-two {
+.player-two {
     color: pink;
+}
+.draw {
+    color: red;
+    text-decoration: underline;
+}
+.start-game {
+    color: black;
+}
+.endgame {
+    color: green;
+    text-decoration: underline;
 }
 .play-again {
     margin: 50px 0 50px 50%;
