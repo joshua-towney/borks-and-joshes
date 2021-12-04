@@ -3,7 +3,7 @@ A take on a classic, demonstrating the love between a boy and his dog
 
 It's Tic-tac-toe but sexier
 
-Select you avatar at the top of the screen (sorry player 2 but player one's is much cuter)
+Select you avatar at the top of the screen (sorry player 2 but player 1 has a much cuter avatar). You can mix and match every go if you so desire. 
 
 ##
 Play my game here https://joshua-towney.github.io/borks-and-joshes/
@@ -14,4 +14,4 @@ When given the task of creating my take on tic-tac-toe, my mind immediately went
 
 I knew from the start I wanted as little GUI on screen as possible. rather then setting up full messages such as "Player one wins", "it's a draw" etc, I decided to ony have three words on the screen that could all be toggled to display what I want. Word 1 could toggle between PLAYER/NO. Word 2 between 1/2, and word 3 between TURN/WINS. With these toggles I can display a wide array of three word messages such as "player one wins", "player two turn", "no one wins".
 
-My biggest hurdle was the actual toggle. Originally when I toggled I changed the ID of the ONE/TWO toggle hich caused all sorts of head aches. I got around this by leaving the id as it was and also adding a toggleable class name to the word. 
+My biggest hurdle was the actual toggle. Originally when I toggled I changed the ID of the ONE/TWO toggle hich caused all sorts of head aches. I got around this by leaving the id as it was so I could always select i,  and also adding a toggleable class name to the word. 

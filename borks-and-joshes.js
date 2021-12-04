@@ -1,5 +1,6 @@
 var button = document.querySelectorAll('.token-placement');
 var playAgain = document.querySelector('.play-again');
+
 var btn1 = document.querySelector('#btn1');
 var btn2 = document.querySelector('#btn2');
 var btn3 = document.querySelector('#btn3');
@@ -9,6 +10,7 @@ var btn6 = document.querySelector('#btn6');
 var btn7 = document.querySelector('#btn7');
 var btn8 = document.querySelector('#btn8');
 var btn9 = document.querySelector('#btn9');
+
 var playerOneTurn = true;
 
 var turnWinsToggle = document.querySelector('#turn-wins-toggle');
@@ -34,6 +36,14 @@ var josh3 = document.querySelector('#josh3');
 var josh4 = document.querySelector('#josh4');
 var josh1 = document.querySelector('#josh');
 
+var arrow1 = document.querySelector('.arrow1');
+var arrow2 = document.querySelector('.arrow2');
+
+var p1NameSelectButton = document.querySelector('#p1-name-choose');
+var p2NameSelectButton = document.querySelector('#p2-name-choose');
+var playerOneName = document.querySelector('.player-one-name');
+var playerTwoName = document.querySelector('.player-two-name');
+
 function togglePlayerTurn() {
     playerOneTurn = !playerOneTurn;
 }
@@ -43,7 +53,7 @@ function buttonHoverColor(event) {
 }
 function buttonNoHoverColor(event) {
     let theOneHoveredOn = event.target;
-    theOneHoveredOn.style.backgroundColor = "grey"
+    theOneHoveredOn.style.backgroundColor = "maroon";
 }
 function selectedSquare(event) {
     let theOneClickedOn = event.target;
@@ -55,12 +65,10 @@ function selectedSquare(event) {
     } else {
         theOneClickedOn.style.background = p2Token;
     }
-    //set style.background to an image
-
     if (playerOneTurn === true) {
         theOneClickedOn.textContent = "X";
+
         if ((btn1.disabled === true) && (btn2.disabled === true) && (btn3.disabled === true) && (btn1.textContent === "X") && (btn2.textContent === "X") && (btn3.textContent === "X")){
-            console.log('line 1 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -68,7 +76,6 @@ function selectedSquare(event) {
             p1Score.textContent = p1ScoreNum;
             gameOver();
         } else if ((btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn4.textContent === "X") && (btn5.textContent === "X") && (btn6.textContent === "X")) {
-            console.log('line 2 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -76,7 +83,6 @@ function selectedSquare(event) {
             p1Score.textContent = p1ScoreNum;
             gameOver();
         } else if ((btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true) && (btn7.textContent === "X") && (btn8.textContent === "X") && (btn9.textContent === "X")) {
-            console.log('line 3 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -84,7 +90,6 @@ function selectedSquare(event) {
             p1Score.textContent = p1ScoreNum;
             gameOver();
         } else if ((btn1.disabled === true) && (btn4.disabled === true) && (btn7.disabled === true) && (btn1.textContent === "X") && (btn4.textContent === "X") && (btn7.textContent === "X")) {
-            console.log('line 4 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -92,7 +97,6 @@ function selectedSquare(event) {
             p1Score.textContent = p1ScoreNum;
             gameOver();
         } else if ((btn2.disabled === true) && (btn5.disabled === true) && (btn8.disabled === true) && (btn2.textContent === "X") && (btn5.textContent === "X") && (btn8.textContent === "X")) {
-            console.log('line 5 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -100,7 +104,6 @@ function selectedSquare(event) {
             p1Score.textContent = p1ScoreNum;
             gameOver();
         } else if ((btn3.disabled === true) && (btn6.disabled === true) && (btn9.disabled === true) && (btn3.textContent === "X") && (btn6.textContent === "X") && (btn9.textContent === "X")) {
-            console.log('line 6 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -108,7 +111,6 @@ function selectedSquare(event) {
             p1Score.textContent = p1ScoreNum;
             gameOver();
         } else if ((btn1.disabled === true) && (btn5.disabled === true) && (btn9.disabled === true) && (btn1.textContent === "X") && (btn5.textContent === "X") && (btn9.textContent === "X")) {
-            console.log('line 7 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -116,7 +118,6 @@ function selectedSquare(event) {
             p1Score.textContent = p1ScoreNum;
             gameOver();
         } else if ((btn3.disabled === true) && (btn5.disabled === true) && (btn7.disabled === true) && (btn3.textContent === "X") && (btn5.textContent === "X") && (btn7.textContent === "X")) {
-            console.log('line 8 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -124,7 +125,6 @@ function selectedSquare(event) {
             p1Score.textContent = p1ScoreNum;
             gameOver();
         } else if ((btn1.disabled === true) && (btn2.disabled === true) && (btn3.disabled === true) && (btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true)) {
-                console.log('Its a draw');
                 playerNoToggle.textContent = "NO";
                 turnWinsToggle.textContent = "WINS";
                 playerNoToggle.className = "draw";
@@ -134,15 +134,16 @@ function selectedSquare(event) {
                 drawScore.textContent = drawScoreNum;
                 gameOver();
         } else {
-            console.log('yippy ki yay');
             oneTwoToggleText.textContent = "TWO";
             oneTwoToggle.className = "player-two";
+            arrow1.style.color = "grey";
+            arrow2.style.color = "pink";
             togglePlayerTurn();
         }
     } else {
         theOneClickedOn.textContent = "O";
+
         if ((btn1.disabled === true) && (btn2.disabled === true) && (btn3.disabled === true) && (btn1.textContent === "O") && (btn2.textContent === "O") && (btn3.textContent === "O")){
-            console.log('line 1 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -151,7 +152,6 @@ function selectedSquare(event) {
             p2Score.textContent = p2ScoreNum;
             gameOver();
         } else if ((btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn4.textContent === "O") && (btn5.textContent === "O") && (btn6.textContent === "O")) {
-            console.log('line 2 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -159,7 +159,6 @@ function selectedSquare(event) {
             p2Score.textContent = p2ScoreNum;
             gameOver();
         } else if ((btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true) && (btn7.textContent === "O") && (btn8.textContent === "O") && (btn9.textContent === "O")) {
-            console.log('line 3 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -167,7 +166,6 @@ function selectedSquare(event) {
             p2Score.textContent = p2ScoreNum;
             gameOver();
         } else if ((btn1.disabled === true) && (btn4.disabled === true) && (btn7.disabled === true) && (btn1.textContent === "O") && (btn4.textContent === "O") && (btn7.textContent === "O")) {
-            console.log('line 4 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -175,7 +173,6 @@ function selectedSquare(event) {
             p2Score.textContent = p2ScoreNum;
             gameOver();
         } else if ((btn2.disabled === true) && (btn5.disabled === true) && (btn8.disabled === true) && (btn2.textContent === "O") && (btn5.textContent === "O") && (btn8.textContent === "O")) {
-            console.log('line 5 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -183,7 +180,6 @@ function selectedSquare(event) {
             p2Score.textContent = p2ScoreNum;
             gameOver();
         } else if ((btn3.disabled === true) && (btn6.disabled === true) && (btn9.disabled === true) && (btn3.textContent === "O") && (btn6.textContent === "O") && (btn9.textContent === "O")) {
-            console.log('line 6 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -191,7 +187,6 @@ function selectedSquare(event) {
             p2Score.textContent = p2ScoreNum;
             gameOver();
         } else if ((btn1.disabled === true) && (btn5.disabled === true) && (btn9.disabled === true) && (btn1.textContent === "O") && (btn5.textContent === "O") && (btn9.textContent === "O")) {
-            console.log('line 7 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -199,7 +194,6 @@ function selectedSquare(event) {
             p2Score.textContent = p2ScoreNum;
             gameOver();
         } else if ((btn3.disabled === true) && (btn5.disabled === true) && (btn7.disabled === true) && (btn3.textContent === "O") && (btn5.textContent === "O") && (btn7.textContent === "O")) {
-            console.log('line 8 game over');
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "endgame";
             turnWinsToggle.className = "endgame";
@@ -207,7 +201,6 @@ function selectedSquare(event) {
             p2Score.textContent = p2ScoreNum;
             gameOver();
         } else if ((btn1.disabled === true) && (btn2.disabled === true) && (btn3.disabled === true) && (btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true)) {
-            console.log('Its a draw');
             playerNoToggle.textContent = "NO";
             turnWinsToggle.textContent = "WINS";
             playerNoToggle.className = "draw";
@@ -217,9 +210,10 @@ function selectedSquare(event) {
             drawScore.textContent = drawScoreNum;
             gameOver();
         } else {
-            console.log('yippy ki yay');
             oneTwoToggleText.textContent = "ONE";
             oneTwoToggle.className = "player-one";
+            arrow1.style.color = "indigo";
+            arrow2.style.color = "grey";
             togglePlayerTurn();
         }
     }
@@ -237,15 +231,15 @@ function startGameAgain() {
     btn8.disabled = false;
     btn9.disabled = false;
 
-    btn1.style.background = "grey";
-    btn2.style.background = "grey";
-    btn3.style.background = "grey";
-    btn4.style.background = "grey";
-    btn5.style.background = "grey";
-    btn6.style.background = "grey";
-    btn7.style.background = "grey";
-    btn8.style.background = "grey";
-    btn9.style.background = "grey";
+    btn1.style.background = "maroon";
+    btn2.style.background = "maroon";
+    btn3.style.background = "maroon";
+    btn4.style.background = "maroon";
+    btn5.style.background = "maroon";
+    btn6.style.background = "maroon";
+    btn7.style.background = "maroon";
+    btn8.style.background = "maroon";
+    btn9.style.background = "maroon";
 
     btn1.textContent = "";
     btn2.textContent = "";
@@ -263,6 +257,8 @@ function startGameAgain() {
     playerNoToggle.className = "start-game";
     turnWinsToggle.className = "start-game";
     playAgain.style.backgroundColor = "grey";
+    arrow1.style.color = "indigo";
+    arrow2.style.color = "grey";
     playAgain.disabled = true;
 }
 
@@ -278,6 +274,24 @@ function gameOver() {
     btn9.disabled = true;
     playAgain.style.backgroundColor = "orange";
     playAgain.disabled = false;
+}
+function playerOneNameChange() {
+    playerOneName.textContent = prompt("Hi friend. What is your name?");
+    p1ScoreNum = 0;
+    p2ScoreNum = 0;
+    drawScoreNum = 0;
+    p1Score.textContent = p1ScoreNum;
+    p2Score.textContent = p2ScoreNum;
+    drawScore.textContent = drawScoreNum;
+}
+function playerTwoNameChange() {
+    playerTwoName.textContent = prompt("NAME! GIVE!");
+    p1ScoreNum = 0;
+    p2ScoreNum = 0;
+    drawScoreNum = 0;
+    p1Score.textContent = p1ScoreNum;
+    p2Score.textContent = p2ScoreNum;
+    drawScore.textContent = drawScoreNum;
 }
 
 button.forEach(function(scrollOver) {
@@ -328,3 +342,5 @@ josh1.addEventListener('click', function() {
     josh4.className = 'transparent';
 })
 
+p1NameSelectButton.addEventListener('click', playerOneNameChange);
+p2NameSelectButton.addEventListener('click', playerTwoNameChange);
