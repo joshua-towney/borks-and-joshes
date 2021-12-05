@@ -45,6 +45,10 @@ var p2NameSelectButton = document.querySelector('#p2-name-choose');
 var playerOneName = document.querySelector('.player-one-name');
 var playerTwoName = document.querySelector('.player-two-name');
 
+var dogs = new Audio('dogs.wav');
+var guitar = new Audio('guitar.wav');
+var boo = new Audio('boo.wav');
+
 function togglePlayerTurn() {
     playerOneTurn = !playerOneTurn;
 }
@@ -75,6 +79,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p1ScoreNum++;
             p1Score.textContent = p1ScoreNum;
+            dogs.play();
             gameOver();
         } else if ((btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn4.textContent === "X") && (btn5.textContent === "X") && (btn6.textContent === "X")) {
             turnWinsToggle.textContent = "WINS";
@@ -82,6 +87,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p1ScoreNum++;
             p1Score.textContent = p1ScoreNum;
+            dogs.play();
             gameOver();
         } else if ((btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true) && (btn7.textContent === "X") && (btn8.textContent === "X") && (btn9.textContent === "X")) {
             turnWinsToggle.textContent = "WINS";
@@ -89,6 +95,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p1ScoreNum++;
             p1Score.textContent = p1ScoreNum;
+            dogs.play();
             gameOver();
         } else if ((btn1.disabled === true) && (btn4.disabled === true) && (btn7.disabled === true) && (btn1.textContent === "X") && (btn4.textContent === "X") && (btn7.textContent === "X")) {
             turnWinsToggle.textContent = "WINS";
@@ -96,6 +103,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p1ScoreNum++;
             p1Score.textContent = p1ScoreNum;
+            dogs.play();
             gameOver();
         } else if ((btn2.disabled === true) && (btn5.disabled === true) && (btn8.disabled === true) && (btn2.textContent === "X") && (btn5.textContent === "X") && (btn8.textContent === "X")) {
             turnWinsToggle.textContent = "WINS";
@@ -103,6 +111,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p1ScoreNum++;
             p1Score.textContent = p1ScoreNum;
+            dogs.play();
             gameOver();
         } else if ((btn3.disabled === true) && (btn6.disabled === true) && (btn9.disabled === true) && (btn3.textContent === "X") && (btn6.textContent === "X") && (btn9.textContent === "X")) {
             turnWinsToggle.textContent = "WINS";
@@ -110,6 +119,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p1ScoreNum++;
             p1Score.textContent = p1ScoreNum;
+            dogs.play();
             gameOver();
         } else if ((btn1.disabled === true) && (btn5.disabled === true) && (btn9.disabled === true) && (btn1.textContent === "X") && (btn5.textContent === "X") && (btn9.textContent === "X")) {
             turnWinsToggle.textContent = "WINS";
@@ -117,6 +127,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p1ScoreNum++;
             p1Score.textContent = p1ScoreNum;
+            dogs.play();
             gameOver();
         } else if ((btn3.disabled === true) && (btn5.disabled === true) && (btn7.disabled === true) && (btn3.textContent === "X") && (btn5.textContent === "X") && (btn7.textContent === "X")) {
             turnWinsToggle.textContent = "WINS";
@@ -124,6 +135,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p1ScoreNum++;
             p1Score.textContent = p1ScoreNum;
+            dogs.play();
             gameOver();
         } else if ((btn1.disabled === true) && (btn2.disabled === true) && (btn3.disabled === true) && (btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true)) {
                 playerNoToggle.textContent = "NO";
@@ -133,6 +145,7 @@ function selectedSquare(event) {
                 oneTwoToggle.className = "draw";
                 drawScoreNum++;
                 drawScore.textContent = drawScoreNum;
+                boo.play();
                 gameOver();
         } else {
             oneTwoToggleText.textContent = "TWO";
@@ -151,6 +164,7 @@ function selectedSquare(event) {
             p2ScoreNum++;
             p2ScoreNum++;
             p2Score.textContent = p2ScoreNum;
+            guitar.play();
             gameOver();
         } else if ((btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn4.textContent === "O") && (btn5.textContent === "O") && (btn6.textContent === "O")) {
             turnWinsToggle.textContent = "WINS";
@@ -158,6 +172,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p2ScoreNum++;
             p2Score.textContent = p2ScoreNum;
+            guitar.play();
             gameOver();
         } else if ((btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true) && (btn7.textContent === "O") && (btn8.textContent === "O") && (btn9.textContent === "O")) {
             turnWinsToggle.textContent = "WINS";
@@ -165,6 +180,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p2ScoreNum++;
             p2Score.textContent = p2ScoreNum;
+            guitar.play();
             gameOver();
         } else if ((btn1.disabled === true) && (btn4.disabled === true) && (btn7.disabled === true) && (btn1.textContent === "O") && (btn4.textContent === "O") && (btn7.textContent === "O")) {
             turnWinsToggle.textContent = "WINS";
@@ -172,6 +188,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p2ScoreNum++;
             p2Score.textContent = p2ScoreNum;
+            guitar.play();
             gameOver();
         } else if ((btn2.disabled === true) && (btn5.disabled === true) && (btn8.disabled === true) && (btn2.textContent === "O") && (btn5.textContent === "O") && (btn8.textContent === "O")) {
             turnWinsToggle.textContent = "WINS";
@@ -179,6 +196,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p2ScoreNum++;
             p2Score.textContent = p2ScoreNum;
+            guitar.play();
             gameOver();
         } else if ((btn3.disabled === true) && (btn6.disabled === true) && (btn9.disabled === true) && (btn3.textContent === "O") && (btn6.textContent === "O") && (btn9.textContent === "O")) {
             turnWinsToggle.textContent = "WINS";
@@ -186,6 +204,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p2ScoreNum++;
             p2Score.textContent = p2ScoreNum;
+            guitar.play();
             gameOver();
         } else if ((btn1.disabled === true) && (btn5.disabled === true) && (btn9.disabled === true) && (btn1.textContent === "O") && (btn5.textContent === "O") && (btn9.textContent === "O")) {
             turnWinsToggle.textContent = "WINS";
@@ -193,6 +212,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p2ScoreNum++;
             p2Score.textContent = p2ScoreNum;
+            guitar.play();
             gameOver();
         } else if ((btn3.disabled === true) && (btn5.disabled === true) && (btn7.disabled === true) && (btn3.textContent === "O") && (btn5.textContent === "O") && (btn7.textContent === "O")) {
             turnWinsToggle.textContent = "WINS";
@@ -200,6 +220,7 @@ function selectedSquare(event) {
             turnWinsToggle.className = "endgame";
             p2ScoreNum++;
             p2Score.textContent = p2ScoreNum;
+            guitar.play();
             gameOver();
         } else if ((btn1.disabled === true) && (btn2.disabled === true) && (btn3.disabled === true) && (btn4.disabled === true) && (btn5.disabled === true) && (btn6.disabled === true) && (btn7.disabled === true) && (btn8.disabled === true) && (btn9.disabled === true)) {
             playerNoToggle.textContent = "NO";
@@ -209,6 +230,7 @@ function selectedSquare(event) {
             oneTwoToggle.className = "draw";
             drawScoreNum++;
             drawScore.textContent = drawScoreNum;
+            boo.play();
             gameOver();
         } else {
             oneTwoToggleText.textContent = "ONE";
@@ -251,6 +273,7 @@ function startGameAgain() {
     btn7.textContent = "";
     btn8.textContent = "";
     btn9.textContent = "";
+
     playerNoToggle.textContent = "PLAYER";
     oneTwoToggle.textContent = "ONE";
     turnWinsToggle.textContent = "TURN";
@@ -262,6 +285,10 @@ function startGameAgain() {
     arrow1.style.color = "indigo";
     arrow2.style.color = "grey";
     playAgain.disabled = true;
+
+    guitar.pause();
+    dogs.pause();
+    boo.pause();
 }
 
 function gameOver() {
