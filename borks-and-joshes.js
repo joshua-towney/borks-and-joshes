@@ -58,7 +58,7 @@ function buttonHoverColor(event) {
 }
 function buttonNoHoverColor(event) {
     let theOneHoveredOn = event.target;
-    theOneHoveredOn.style.backgroundColor = "maroon";
+    theOneHoveredOn.style.backgroundColor = "indigo";
 }
 function selectedSquare(event) {
     let theOneClickedOn = event.target;
@@ -254,15 +254,15 @@ function startGameAgain() {
     btn8.disabled = false;
     btn9.disabled = false;
 
-    btn1.style.background = "maroon";
-    btn2.style.background = "maroon";
-    btn3.style.background = "maroon";
-    btn4.style.background = "maroon";
-    btn5.style.background = "maroon";
-    btn6.style.background = "maroon";
-    btn7.style.background = "maroon";
-    btn8.style.background = "maroon";
-    btn9.style.background = "maroon";
+    btn1.style.background = "indigo";
+    btn2.style.background = "indigo";
+    btn3.style.background = "indigo";
+    btn4.style.background = "indigo";
+    btn5.style.background = "indigo";
+    btn6.style.background = "indigo";
+    btn7.style.background = "indigo";
+    btn8.style.background = "indigo";
+    btn9.style.background = "indigo";
 
     btn1.textContent = "";
     btn2.textContent = "";
@@ -287,8 +287,11 @@ function startGameAgain() {
     playAgain.disabled = true;
 
     guitar.pause();
+    guitar.currentTime = 0;
     dogs.pause();
+    dogs.currentTime = 0;
     boo.pause();
+    boo.currentTime = 0;
 }
 
 function gameOver() {

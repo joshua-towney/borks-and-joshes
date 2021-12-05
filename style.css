@@ -58,7 +58,7 @@ p {
 .token-placement {
     height: 150px;
     width: 150px;
-    background-color: maroon;
+    background-color: indigo;
     font-size: 0;
 }
 .player-one {
@@ -116,7 +116,7 @@ p {
     color: silver;
     border-radius: 50px 0 0 0;
     text-decoration: underline;
-    text-shadow: 1px 10px indigo;
+    text-shadow: 10px 10px indigo;
     
 }
 #and-joshes {
@@ -195,9 +195,11 @@ p {
 }
 .arrow1 {
     font-size: 3em;
+    text-shadow: 10px 10px black;
 }
 .arrow2 {
     font-size: 3em;
+    text-shadow: 10px 10px black;
 }
 .break1 {
     height: 60px;
@@ -210,7 +212,6 @@ p {
     font-size: 10em;
     text-align: center;
     color: indigo;
-    
 }
 .arrow2 {
     font-size: 10em;
