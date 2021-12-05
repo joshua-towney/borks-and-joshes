@@ -5,6 +5,8 @@ It's Tic-tac-toe but sexier
 
 Select you avatar at the top of the screen (sorry player 2 but player 1 has a much cuter avatar). You can mix and match every go if you so desire. 
 
+You can change your player names using the buttons at the top-right of the game. DOing so will also reset the scores. 
+
 ##
 Play my game here https://joshua-towney.github.io/borks-and-joshes/
 

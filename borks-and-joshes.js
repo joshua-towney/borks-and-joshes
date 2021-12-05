@@ -12,6 +12,7 @@ var btn8 = document.querySelector('#btn8');
 var btn9 = document.querySelector('#btn9');
 
 var playerOneTurn = true;
+var adaptableWords = document.querySelector('.adaptable-words');
 
 var turnWinsToggle = document.querySelector('#turn-wins-toggle');
 var playerNoToggle = document.querySelector('#player-no-toggle');
@@ -137,7 +138,7 @@ function selectedSquare(event) {
             oneTwoToggleText.textContent = "TWO";
             oneTwoToggle.className = "player-two";
             arrow1.style.color = "grey";
-            arrow2.style.color = "pink";
+            arrow2.style.color = "navy";
             togglePlayerTurn();
         }
     } else {
@@ -257,6 +258,7 @@ function startGameAgain() {
     playerNoToggle.className = "start-game";
     turnWinsToggle.className = "start-game";
     playAgain.style.backgroundColor = "grey";
+    adaptableWords.style.backgroundColor = "silver";
     arrow1.style.color = "indigo";
     arrow2.style.color = "grey";
     playAgain.disabled = true;
@@ -272,6 +274,7 @@ function gameOver() {
     btn7.disabled = true;
     btn8.disabled = true;
     btn9.disabled = true;
+    adaptableWords.style.backgroundColor = "green";
     playAgain.style.backgroundColor = "orange";
     playAgain.disabled = false;
 }
@@ -283,6 +286,7 @@ function playerOneNameChange() {
     p1Score.textContent = p1ScoreNum;
     p2Score.textContent = p2ScoreNum;
     drawScore.textContent = drawScoreNum;
+    startGameAgain();
 }
 function playerTwoNameChange() {
     playerTwoName.textContent = prompt("NAME! GIVE!");
@@ -292,8 +296,8 @@ function playerTwoNameChange() {
     p1Score.textContent = p1ScoreNum;
     p2Score.textContent = p2ScoreNum;
     drawScore.textContent = drawScoreNum;
+    startGameAgain();
 }
-
 button.forEach(function(scrollOver) {
     scrollOver.addEventListener('mouseover', buttonHoverColor)
 });

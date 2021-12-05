@@ -53,7 +53,7 @@ p {
 }
 .left { 
     border-radius: 50px 0 0 50px;
-
+    width:100%;
 }
 .token-placement {
     height: 150px;
@@ -68,13 +68,15 @@ p {
     margin-top: 0;
 }
 .player-two {
-    color: pink;
+    color: navy;
     font-size: 1.7em;
     margin-bottom: 0;
     margin-top: 0;
 }
 .draw {
-    color: red;
+    color: silver;
+    background-color: red;
+    text-shadow: 5px 5px black;
     text-decoration: underline;
     font-size: 1.7em;
     margin-bottom: 0;
@@ -84,7 +86,7 @@ p {
     color: black;
 }
 .endgame {
-    color: green;
+    /* color: green; */
     text-decoration: underline;
 }
 #turn-wins-toggle {
@@ -103,7 +105,7 @@ p {
     font-size: 2em;
     border-radius: 50%;
     background-color: grey;
-    margin: auto;
+    border: 5px solid black;
 }
 #borks {
     font-size: 125px;
@@ -114,6 +116,9 @@ p {
     background-color: black;
     color: silver;
     border-radius: 50px 0 0 0;
+    text-decoration: underline;
+    text-shadow: 1px 10px indigo;
+    
 }
 #and-joshes {
     margin-top: 0;
@@ -123,6 +128,8 @@ p {
     border: 5px solid black;
     background-color: black;
     color: silver;
+    text-decoration: underline;
+    text-shadow: 10px 10px navy;
 }
 .transparent {
     filter: blur(10px);
@@ -204,6 +211,7 @@ p {
     font-size: 10em;
     text-align: center;
     color: indigo;
+    
 }
 .arrow2 {
     font-size: 10em;
@@ -223,10 +231,10 @@ p {
     color: indigo;
 }
 #p2-score {
-    color: pink;
+    color: navy;
 }
 #draw-score {
-    color: red;
+    color: maroon;
 }
 #jimmy {
     width:100%;
@@ -245,7 +253,8 @@ p {
     width: 100px;
     margin-left: 12px;
     font-size: 1em;
-    background-color: mediumaquamarine;
+    border: 5px solid black;
+    background-color: indigo;
 }
 #p2-name-choose {
     border-radius: 20px;
@@ -253,7 +262,8 @@ p {
     height: 100px;
     width: 100px;
     font-size: 1em;
-    background-color: midnightblue;
+    border: 5px solid black;
+    background-color: navy;
     color: silver;
 }
 @media (max-width: 1100px) {
